@@ -1,0 +1,74 @@
+<form method="post" enctype="multipart/form-data">
+	<TMPL_IF NAME=LOGIN>
+		<input type="hidden" name="login" value="<TMPL_VAR NAME=LOGIN>">
+	</TMPL_IF>
+	<TMPL_IF NAME=SCREEN>
+		<input type="hidden" name="screen" value="<TMPL_VAR NAME=SCREEN>">
+	</TMPL_IF>
+	<TMPL_IF NAME=TERMS>
+		<input type="hidden" name="search_terms_1" value="<TMPL_VAR NAME=TERMS>">
+	</TMPL_IF>
+	
+	<table align="center" border="1">
+		<caption class="text" style="font-size:20px">Basket</caption>
+		<TMPL_LOOP NAME=RESULTS>
+		<tr>
+		    <td><img height="<TMPL_VAR NAME=HEIGHT>px" width="<TMPL_VAR NAME=WIDTH>px" src="<TMPL_VAR NAME=IMAGE>"></td>
+		    <td><i><TMPL_VAR NAME=TITLE></i><br><TMPL_VAR NAME=AUTHORS><br></td> 
+		    <td align="right"><tt><TMPL_VAR NAME=PRICE></tt></td>
+		    <td><input class="btn" type="submit" name="action <TMPL_VAR NAME=ISBN>" value="Drop"><br>
+			<input class="btn" type="submit" name="action <TMPL_VAR NAME=ISBN>" value="Details"><br></td>
+		</tr>
+		</TMPL_LOOP>
+		<tr>
+		    <td><b>Total</b></td>
+		    <td></td> <td align="right">$<TMPL_VAR NAME=TOTAL></td>
+		</tr>
+	</table>
+</form>
+<p>
+<form method="post" enctype="multipart/form-data">
+	<input type="hidden" name="login" value="<TMPL_VAR NAME=LOGIN>">
+	<input type="hidden" name="screen" value="<TMPL_VAR NAME=SCREEN>">
+	<table align="center" width="700" border="1">
+		<tr>
+		    <td>
+			<table align="center" width="500" colspan="8">
+				<caption class="text" style="font-size:20px"><b>Shipping Details:</b></caption>
+				<tr>
+				    <td><TMPL_VAR NAME=FULLNAME></td>
+				</tr>
+				<tr>
+				    <td><TMPL_VAR NAME=STREET>,</td>
+				</tr>    
+				<tr>
+				    <td><TMPL_VAR NAME=CITY>,</td>
+				</tr>
+				<tr>    
+				    <td><TMPL_VAR NAME=STATE>,</td>
+				</tr>    
+				<tr>
+				    <td><TMPL_VAR NAME=POSTCODE></td>
+				</tr>
+			</table>
+		    </td>
+		    <td>
+		    	<table align="center" width="500">
+				<tr>
+				    <td>Credit Card Number:</td>
+				    <td><input class="text" type="text" name="credit_card_number"  width="16" maxlength="16" required/></td>
+				</tr>
+				<tr>
+				    <td>Expiry date (mm/yy):</td>
+				    <td><input class="text" type="text" name="expiry_date"  width="5" maxlength="5" required/></td>
+				</tr>
+				<tr>
+				    <td align="center" colspan="4">
+					<input class="btn" type="submit" name="action" value="Finalise&#x00A;Order">
+				    </td>
+				</tr>
+			</table>
+		    </td>
+		</tr>
+	</table>
+</form>

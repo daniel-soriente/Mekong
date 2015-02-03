@@ -1,0 +1,16 @@
+<TMPL_LOOP NAME=ORDERS>
+		<table align="center" border="1">
+			<caption><TMPL_VAR NAME=ORDER><br><TMPL_VAR NAME=CREDIT_CARD></caption>
+			<TMPL_LOOP NAME=RESULTS>
+			<tr>
+			    <td><img height="<TMPL_VAR NAME=HEIGHT>px" width="<TMPL_VAR NAME=WIDTH>px" src="<TMPL_VAR NAME=IMAGE>"></td>
+			    <td><i><TMPL_VAR NAME=TITLE></i><br><TMPL_VAR NAME=AUTHORS><br></td> 
+			    <td align="right"><tt><TMPL_VAR NAME=PRICE></tt></td>
+			</tr>
+			</TMPL_LOOP>
+			<tr>
+			    <td><b>Total</b></td>
+			    <td></td> <td align="right">$<TMPL_VAR NAME=TOTAL></td>
+			</tr>
+		</table>
+</TMPL_LOOP>

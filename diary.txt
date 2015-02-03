@@ -1,0 +1,4 @@
+|DATE	|START	|STOP	|ACTIVITY		|COMMENTS							|
+|26/10	|14:00	|21:00	|Start Assignment	|Started and read over starting point code			|
+|29/10	|10:00	|18:00	|Did majority of ass	|Did most of the functionality except for a few in level1 and 2	|
+|1/10	|09:00	|16:00	|Finished		|Formatted and Finished Assignment				|

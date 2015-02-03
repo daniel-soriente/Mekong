@@ -1,0 +1,23 @@
+<form method="post" action="/~djso986/ass2/mekong.cgi" enctype="multipart/form-data">
+	<TMPL_IF NAME=LOGIN>
+		<input type="hidden" name="login" value="<TMPL_VAR NAME=LOGIN>">
+	</TMPL_IF>
+	<input type="hidden" name="screen" value="<TMPL_VAR NAME=SCREEN>">
+	<input type="hidden" name="search_terms_1" value="<TMPL_VAR NAME=TERMS>">
+<TMPL_IF NAME=RESULTS>
+	<table align="center" width="1000" border="1">
+		<caption class="text" style="font-size:20px">Search Results for <i><TMPL_VAR NAME=TERMS></i></caption>
+		<TMPL_LOOP NAME=RESULTS>
+		<tr>
+		    <td align="center"><img height="<TMPL_VAR NAME=HEIGHT>px" width="<TMPL_VAR NAME=WIDTH>px" src="<TMPL_VAR NAME=IMAGE>"></td>
+		    <td class="text"><i><TMPL_VAR NAME=TITLE></i><br><TMPL_VAR NAME=AUTHORS><br></td> 
+		    <td class="text" align="right"><tt><TMPL_VAR NAME=PRICE></tt></td>
+		    <td align="center"><input class="btn" type="submit" name="action <TMPL_VAR NAME=ISBN>" value="Add"><br>
+			<input class="btn" type="submit" name="action <TMPL_VAR NAME=ISBN>" value="Details"><br></td>
+		</tr>
+		</TMPL_LOOP>
+	</table>
+<TMPL_ELSE>
+	<p>No results found for terms:<TMPL_VAR NAME=TERMS></p>
+</TMPL_IF>
+</form>

@@ -1,0 +1,32 @@
+<form method="post" enctype="multipart/form-data">
+	<TMPL_IF NAME=LOGIN>
+		<input type="hidden" name="login" value="<TMPL_VAR NAME=LOGIN>">
+	</TMPL_IF>
+	<TMPL_IF NAME=SCREEN>
+		<input type="hidden" name="screen" value="<TMPL_VAR NAME=SCREEN>">
+	</TMPL_IF>
+	<TMPL_IF NAME=TERMS>
+		<input type="hidden" name="search_terms_1" value="<TMPL_VAR NAME=TERMS>">
+	</TMPL_IF>
+	
+	<div id="search" style="position:absolute; left:9%; top:7px">
+		<input class="text" type="text" name="search_terms" placeholder="Search for Books" style="width:550px">
+		<input type=hidden name="action" value="search">
+	</div>
+</form>
+
+<form method="post" enctype="multipart/form-data">
+	<div id="fields" style="position:absolute; left:56%; top:7px">
+		<input type="hidden" name="screen" value="<TMPL_VAR NAME=SCREEN>">
+		<input type="hidden" name="search_terms_1" value="<TMPL_VAR NAME=TERMS>">
+		<input class="text" type="text" name="login" placeholder="Login" maxlength="50" required/>
+		<input class="text" type="password" name="password" placeholder="Password" maxlength="50" required/>
+		<input class="btn" type="submit" name="action" value="Login">
+	</div>
+</form>
+
+<form method="post" enctype="multipart/form-data">
+	<div style="position:absolute; left:93%; top:7px">
+		<input class="btn" type="submit" name="action" value="New&#x00A;Account">
+	</div>
+</form>

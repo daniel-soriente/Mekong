@@ -1,0 +1,27 @@
+<table align="center">
+<tr>
+	<td><img height="<TMPL_VAR NAME=HEIGHT>px" width="<TMPL_VAR NAME=WIDTH>px" src="<TMPL_VAR NAME=IMAGE>"></td> 
+	<td>
+	<table align="center" width="700">
+		<tr><td><h2><TMPL_VAR NAME=TITLE> - <TMPL_VAR NAME=AUTHORS></h2></td></tr>
+		<tr><td><TMPL_VAR NAME=DESCRIPTION></td></tr>
+		<tr>
+			<table align="center">
+				<tr><td><b>Authors</b></td> <td><TMPL_VAR NAME=AUTHORS></td></tr>
+				<tr><td><b>Binding</b></td> <td><TMPL_VAR NAME=BINDING></td></tr>
+			 	<tr><td><b>Catalog</b></td> <td><TMPL_VAR NAME=CATALOG></td></tr>
+			 	<tr><td><b>EAN</b></td> <td><TMPL_VAR NAME=EAN></td></tr>
+			 	<tr><td><b>ISBN</b></td> <td><TMPL_VAR NAME=ISBN></td></tr>
+			 	<tr><td><b>Number of Pages</b></td> <td><TMPL_VAR NAME=NUMPAGES></td></tr>
+			 	<tr><td><b>Price</b></td> <td><TMPL_VAR NAME=PRICE></td></tr>
+			 	<tr><td><b>Publication Date</b></td> <td><TMPL_VAR NAME=PUBLICATION></td></tr>
+			 	<tr><td><b>Publisher</b></td> <td><TMPL_VAR NAME=PUBLISHER></td></tr>
+			 	<tr><td><b>Sales Rank</b></td> <td><TMPL_VAR NAME=SALESRANK></td></tr>
+			 	<tr><td><b>Title</b></td> <td><TMPL_VAR NAME=TITLE></td></tr>
+			 	<tr><td><b>Year</b></td> <td><TMPL_VAR NAME=YEAR></td></tr>
+		 	</table>
+	 	</tr>
+	</table>
+	</td>
+</tr>
+</table>

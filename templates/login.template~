@@ -1,0 +1,90 @@
+<form method="post" action="/~djso986/ass2/mekong.cgi" enctype="multipart/form-data">
+	<TMPL_IF NAME=LOGIN>
+		<input type="hidden" name="login" value="<TMPL_VAR NAME=LOGIN>">
+	</TMPL_IF>
+	<TMPL_IF NAME=SCREEN>
+		<input type="hidden" name="screen" value="<TMPL_VAR NAME=SCREEN>">
+	</TMPL_IF>
+	<TMPL_IF NAME=TERMS>
+		<input type="hidden" name="search_terms_1" value="<TMPL_VAR NAME=TERMS>">
+	</TMPL_IF>
+	<TMPL_IF NAME=ISBN>
+		<input type="hidden" name="<TMPL_VAR NAME=ISBN>" value="Add">
+	</TMPL_IF>
+	
+	<div id="search" style="position:absolute; left:9%; top:7px">
+		<input class="text" type="text" name="search_terms" placeholder="Search for Books" style="width:550px">
+		<input type=hidden name="action" value="search">
+	</div>
+</form>
+
+<form method="post" action="/~djso986/ass2/mekong.cgi" enctype="multipart/form-data">
+	<TMPL_IF NAME=LOGIN>
+		<input type="hidden" name="login" value="<TMPL_VAR NAME=LOGIN>">
+	</TMPL_IF>
+	<TMPL_IF NAME=SCREEN>
+		<input type="hidden" name="screen" value="<TMPL_VAR NAME=SCREEN>">
+	</TMPL_IF>
+	<TMPL_IF NAME=TERMS>
+		<input type="hidden" name="search_terms_1" value="<TMPL_VAR NAME=TERMS>">
+	</TMPL_IF>
+	<TMPL_IF NAME=ISBN>
+		<input type="hidden" name="<TMPL_VAR NAME=ISBN>" value="Add">
+	</TMPL_IF>
+	
+	<TMPL_IF NAME=BASKET>
+		<div style="position:absolute; left:80%; top:7px">
+			<input class="btn" type="submit" name="action" value="Check&#x00A;Out">
+		</div>
+		<div style="position:absolute; left:86%; top:7px">
+			<input class="btn" type="submit" name="action" value="Orders">
+		</div>
+	</TMPL_IF>
+	<TMPL_IF NAME=CHECK_OUT>
+		<div style="position:absolute; left:80%; top:7px">
+			<input class="btn" type="submit" name="action" value="Basket">
+		</div>
+		<div style="position:absolute; left:86%; top:7px">
+			<input class="btn" type="submit" name="action" value="Orders">
+		</div>
+       	</TMPL_IF>
+       	<TMPL_IF NAME=ORDERS>
+       		<div style="position:absolute; left:80%; top:7px">
+			<input class="btn" type="submit" name="action" value="Basket">
+		</div>
+		<div style="position:absolute; left:86%; top:7px">
+			<input class="btn" type="submit" name="action" value="Check&#x00A;Out">
+		</div>
+        </TMPL_IF>
+        <TMPL_IF NAME=SEARCH>
+        	<div style="position:absolute; left:74%; top:7px">
+			<input class="btn" type="submit" name="action" value="Basket">
+		</div>
+		<div style="position:absolute; left:80%; top:7px">
+			<input class="btn" type="submit" name="action" value="Check&#x00A;Out">
+		</div>
+		<div style="position:absolute; left:86%; top:7px">
+			<input class="btn" type="submit" name="action" value="Orders">
+		</div>
+        </TMPL_IF>
+        <TMPL_IF NAME=DETAILS>
+        	<div style="position:absolute; left:68%; top:7px">
+			<input class="btn" type="submit" name="action <TMPL_VAR NAME=ISBN>" value="Add">
+		</div>
+        	<div style="position:absolute; left:74%; top:7px">
+			<input class="btn" type="submit" name="action" value="Basket">
+		</div>
+		<div style="position:absolute; left:80%; top:7px">
+			<input class="btn" type="submit" name="action" value="Check&#x00A;Out">
+		</div>
+		<div style="position:absolute; left:86%; top:7px">
+			<input class="btn" type="submit" name="action" value="Orders">
+		</div>
+        </TMPL_IF>
+	
+	<div style="position:absolute; left:93%; top:7px">
+		<input class="btn" type="submit" name="action" value="Logout">
+	</div>
+</form>
+
+<p style="position:absolute; top:30px; left:20px; font-family:arial; font-size:20px">Logged in as: <i><TMPL_VAR NAME=LOGIN></i></p>

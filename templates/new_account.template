@@ -1,0 +1,40 @@
+<form method="post" enctype="multipart/form-data">
+	<input type="hidden" name="screen" value="<TMPL_VAR NAME=SCREEN>">
+	<table align="center">
+		<tr>
+		    <td class="text"><b>Login:</b></td>
+		    <td><input class="text" type="text" name="login" style="width:300px" maxlength="50" required/></td>
+		</tr>
+		<tr>
+		    <td class="text"><b>Password:</b></td>
+		    <td><input class="text" type="password" name="password" style="width:300px" maxlength="50" required/></td>
+		</tr>
+		<tr>
+		    <td class="text"><b>Full Name:</b></td>
+		    <td><input class="text" type="text" name="name" style="width:300px" maxlength="50" required/></td>
+		</tr>
+		<tr>
+		    <td class="text"><b>Street:</b></td>
+		    <td><input class="text" type="text" name="street" style="width:300px" maxlength="50" required/></td>
+		</tr>
+		<tr>
+		    <td class="text"><b>City/Suburb:</b></td>
+		    <td><input class="text" type="text" name="city" style="width:300px" maxlength="50" required/></td>
+		</tr>
+		<tr>
+		    <td class="text"><b>State:</b></td>
+		    <td><input class="text" type="text" name="state" style="width:300px" maxlength="50" required/></td>
+		</tr>
+		<tr>
+		    <td class="text"><b>Postcode:</b></td>
+		    <td><input class="text" type="text" name="postcode" style="width:300px" maxlength="50" required/></td>
+		</tr>
+		<tr>
+		    <td class="text"><b>Email Address:</b></td>
+		    <td><input class="text" type="text" name="email" style="width:300px" maxlength="50" required/></td>
+		</tr>
+		<tr>
+		    <td class="text" align="center" colspan="1"> <input class="btn" type="submit" name="action" value="Create&#x00A;Account"></td>
+		</tr>
+	</table>
+</form>
